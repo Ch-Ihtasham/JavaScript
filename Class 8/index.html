@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="Pagination">
+        <div onclick="backbtn()"> Prev </div>
+        <ul>
+            <li class="active link" onclick="activeList()" value="1">1</li>
+            <li class="link" onclick="activeList()" value="2">2</li>
+            <li class="link" onclick="activeList()" value="3">3</li>
+            <li class="link" onclick="activeList()" value="4">4</li>
+            <li class="link" onclick="activeList()" value="5">5</li>
+        </ul>
+        <div onclick="nextbtn()">
+            Next
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li class="active nav">1</li>
+            <li class="nav">2</li>
+            <li class="nav">3</li>
+        </ul>
+    </nav>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
