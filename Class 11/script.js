@@ -25,13 +25,13 @@ obj.email = "chihtasham@gamil.com"
 const obj1 = {1:"a",2:"b"}
 const obj2 = {3:"c",4:"d"}
 const obj3 = Object.assign({},obj1 ,obj2)
-// console.log(obj3)
+console.log(obj3)
 // const obj4 = new Object() create object through constructor
-const obj4 ={
-    id:123,
-    name:"Zeeshan",
-    email:"zeeshan@gmail.com"
-}
+// const obj4 ={
+//     id:123,
+//     name:"Zeeshan",
+//     email:"zeeshan@gmail.com"
+// }
 // console.log(Object.keys(obj4))
 // console.log(Object.values(obj4))
 // console.log(Object.entries(obj4))
@@ -42,7 +42,7 @@ const obj4 ={
 // console.log(obj4)
 // const {name} = obj4;
 // console.log(name)
-const {name : myname} = obj4;
-console.log(myname)
+// const {name : myname} = obj4;
+// console.log(myname)
 
 
