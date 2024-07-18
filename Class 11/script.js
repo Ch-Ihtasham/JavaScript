@@ -32,13 +32,17 @@ const obj4 ={
     name:"Zeeshan",
     email:"zeeshan@gmail.com"
 }
-console.log(Object.keys(obj4))
-console.log(Object.values(obj4))
-console.log(Object.entries(obj4))
-Object.freeze(obj4)
+// console.log(Object.keys(obj4))
+// console.log(Object.values(obj4))
+// console.log(Object.entries(obj4))
+// Object.freeze(obj4)
 // Object.seal(obj4)
 // delete obj4.email
 // obj4.email="ihtasham"
 // console.log(obj4)
+// const {name} = obj4;
+// console.log(name)
+const {name : myname} = obj4;
+console.log(myname)
 
 
