@@ -40,3 +40,10 @@ console.log(myarr)
 myarr.forEach((num)=> num)
 // let ans = myarr.map((num) => num)
 // console.log(ans)
+let numb=[1,2,3,4];
+let z=0
+let ans=numb.reduce((acc,cv)=>{
+    return acc+cv
+
+},z)
+console.log(ans)
