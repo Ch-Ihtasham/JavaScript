@@ -21,13 +21,40 @@
         <li>four</li>
     </ul>
     <p></p>
-    <div>
-        <div>Monday</div>
-        <div>Tuesday</div>
-        <div>Wednesday</div>
-        <div>Thursday</div>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="add"></div>
     </div>
     <script>
+        const parent = document.querySelector('.parent')
+        // console.log()
+        // const days = parent.children
+        // Array.from(days).forEach((e)=>{
+        //     console.log(e.innerHTML)
+        // })
+        const day=document.querySelector('.day')
+        const add=document.querySelector('.add')
+        const text=document.createTextNode("this is a chai")
+        add.appendChild(text)
+        console.log(add)
+        // day.setAttribute('class',"hel")
+        // day.className="ggg"
+        
+        // console.log(day.nextElementSibling.style.color="red")
+       const ans= document.createElement("h1")
+       ans.className="hello"
+       ans.setAttribute('title','ihtasham')
+    //    ans.innerHTML="<h1>hello world</h1>"
+       console.log(ans)
+       document.body.appendChild(ans)
+
+
+        
+         
+
         // const text = "Welcome to my app!";
         // const typingSpeed = 150; // czas w milisekundach między literami
         // let i = 0;
