@@ -28,19 +28,22 @@
 <script>
     const buttons = document.querySelectorAll('.button')
     const body = document.querySelector('body')
-    const colorName = ['red', 'bule', 'grey', 'salmon']
+    const colorName = ['red', 'blue', 'grey', 'salmon']
     for (let i = 0; i < colorName.length; i++) {
         buttons[i].style.backgroundColor = colorName[i]
     }
     buttons.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             body.style.backgroundColor = e.target.id
+            console.log(e)
         })
     })
     const colorPicker = document.querySelector("input")
     colorPicker.addEventListener('input', (e) => {
         body.style.backgroundColor=e.target.value
+        console.log(e)
     })
+
 
 
 </script>
