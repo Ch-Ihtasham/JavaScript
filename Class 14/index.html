@@ -14,7 +14,7 @@
 
 <body style="background-color: black;">
     <h1 style="color:white" id="title">this is my heading</h1>
-    <ul>
+    <ul class="number">
         <li>one</li>
         <li>two</li>
         <li>three</li>
@@ -29,31 +29,47 @@
         <div class="add"></div>
     </div>
     <script>
-        const parent = document.querySelector('.parent')
+        // const parent = document.querySelector('.parent')
         // console.log()
         // const days = parent.children
         // Array.from(days).forEach((e)=>{
         //     console.log(e.innerHTML)
         // })
-        const day=document.querySelector('.day')
-        const add=document.querySelector('.add')
-        const text=document.createTextNode("this is a chai")
-        add.appendChild(text)
-        console.log(add)
+        // const day=document.querySelector('.day')
+        // const add=document.querySelector('.add')
+        // const text=document.createTextNode("this is a chai")
+        // add.appendChild(text)
+        // console.log(add)
         // day.setAttribute('class',"hel")
         // day.className="ggg"
-        
+
         // console.log(day.nextElementSibling.style.color="red")
-       const ans= document.createElement("h1")
-       ans.className="hello"
-       ans.setAttribute('title','ihtasham')
-    //    ans.innerHTML="<h1>hello world</h1>"
-       console.log(ans)
-       document.body.appendChild(ans)
+        //    const ans= document.createElement("h1")
+        //    ans.className="hello"
+        //    ans.setAttribute('title','ihtasham')
+        //    ans.innerHTML="<h1>hello world</h1>"
+        //    console.log(ans)
+        //    document.body.appendChild(ans)
+        let ul = document.querySelector('.number')
+        //    let num= prompt("enter a number")
+        function addListItems(num) {
+            let li = document.createElement('li')
+            li.innerText = num
+            ul.appendChild(li)
+        }
+        addListItems("five");
+        addListItems("six");
+        function optimizeAddingElement(num2) {
+            //    ul.appendChild( document.createElement("li").appendChild(document.createTextNode("seven")))
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(num2))
+            ul.appendChild(li)
 
 
-        
-         
+        }
+        optimizeAddingElement("seven");
+
+
 
         // const text = "Welcome to my app!";
         // const typingSpeed = 150; // czas w milisekundach między literami
