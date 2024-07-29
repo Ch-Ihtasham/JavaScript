@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        button {
+            height: 70px;
+            width: 100px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Background Color Changer</h1>
+
+    <button class="button" id="red">Red</button>
+    <button class="button" id="blue">Blue</button>
+    <button class="button" id="grey">Grey</button>
+    <button class="button" id="salmon">Salmon</button>
+    <br><br><br>
+    <input type="color">
+</body>
+<script>
+    const buttons = document.querySelectorAll('.button')
+    const body = document.querySelector('body')
+    const colorName = ['red', 'bule', 'grey', 'salmon']
+    for (let i = 0; i < colorName.length; i++) {
+        buttons[i].style.backgroundColor = colorName[i]
+    }
+    buttons.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            body.style.backgroundColor = e.target.id
+        })
+    })
+    const colorPicker = document.querySelector("input")
+    colorPicker.addEventListener('input', (e) => {
+        body.style.backgroundColor=e.target.value
+    })
+
+
+</script>
+
+</html>
