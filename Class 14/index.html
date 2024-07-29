@@ -68,6 +68,12 @@
 
         }
         optimizeAddingElement("seven");
+       const selectitem= document.querySelector("li:nth-child(2)")
+        const item=document.createElement("li")
+        item.innerHTML="eight element"
+        selectitem.replaceWith(item)
+        document.querySelector('li:first-child').outerHTML="<li>oneee</li>"
+
 
 
 
