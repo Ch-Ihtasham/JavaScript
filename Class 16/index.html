@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 16</title>
 </head>
-<body>
-    
+
+<body style="color: white;">
+    <div id="clickMe">
+        click me
+        <div id="child">child</div>
+
+    </div>
+    <select name="" >
+
+        <option value="ihtasham">ihtasham</option>
+        <option value="talat">talat</option>
+        <option value="jutt">jutt</option>
+    </select>
+    <div id="names" >
+        <div style="background-color: aquamarine;">ihtasham</div>
+        <div style="background-color: aquamarine;">talat</div>
+        <div style="background-color: aquamarine;">jutt</div>
+    </div>
+
+    <script>
+        document.querySelector('body').style.backgroundColor = 'black'
+        let parent = document.getElementById('clickMe').style.backgroundColor = 'white'
+        document.getElementById('clickMe').addEventListener('onchnage', (e) => {
+            // console.log(e.timeStamp.toString())
+            console.log(e.target)
+        })
+        // false is the third argument which refer to propogation by default it is bubbling propogation and second propogation is capture propogation  
+
+        const collection = document.getElementById('names')
+        // console.log(collection)
+        // console.log(collection.value)
+        // collection.addEventListener('change',()=>{
+        //     console.log(collection.value)
+        //     console.log('hello')
+        // })
+        // console.log(names.children)
+        collection.addEventListener('click',(e)=>{
+            // console.log(e.target.value)
+            e.target.remove()
+        })
+
+    </script>
 </body>
+
 </html>
