@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 17</title>
+</head>
+
+<body>
+    <h1>
+        hello world
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </h1>
+
+    <script>
+        // let stop = setTimeout(() => {
+        //     alert('hello world')
+        // }, 2000)
+        // clearTimeout(stop)
+
+        // let ans = setInterval(() => {
+        //     console.log('hello world')
+        // }, 1000)
+
+        // clearInterval(ans)
+
+        // let start = function () {
+        //     console.log('hello world')
+        // }
+        // let ans= setInterval(start,1000)
+        // clearInterval(ans)
+        let intervalId;
+        const startBtn = document.getElementById('start')
+        startBtn.addEventListener('click', () => {
+            intervalId = setInterval(() => {
+                console.log('hello world')
+            }, 1000)
+        })
+        const stopBtn = document.getElementById('stop')
+        stopBtn.addEventListener('click', () => {
+            clearInterval(intervalId)
+        })
+
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        color += hex[Math.floor(Math.random() * 16)]
+        console.log(color)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
