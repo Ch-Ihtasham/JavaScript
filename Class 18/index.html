@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 18</title>
+</head>
+
+<body>
+
+    <div class="name"></div>
+    <img src="" alt="">
+    <div class="followers"></div>
+
+
+
+
+
+    <script>
+        let img = document.querySelector('img')
+        const url = 'https://api.github.com/users/ch-ihtasham'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', url)
+
+
+        // console.log(xhr.readyState) to chk the state number start with zero
+        // to track the state continous we use this function ,we can use this key word with simple function
+
+
+        xhr.onreadystatechange = () => {
+            // console.log(xhr.readyState)
+            if (xhr.readyState === 4) {
+                // console.log(xhr.responseText)
+                let data = JSON.parse(xhr.responseText)
+                console.log(typeof data) // now it is in oject form 
+                console.log(data)
+                console.log(data.followers)
+                console.log(data.avatar_url)
+                var pic = data.avatar_url
+
+
+            }
+            img.src = pic
+            // console.log(xhr.responseText)
+
+        }
+
+        xhr.send()
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
