@@ -33,26 +33,53 @@
 //     console.log(user)
 // })
 
-const promiseFour = new Promise((resolve, reject) => {
+// const promiseFour = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let error = false
+//         if (!error) {
+//             resolve({
+//                 username: 'shami',
+//                 class: 10
+//             })
+//         }
+//         else {
+//             reject('error:something went wrong')
+//         }
+//     }, 1000);
+// })
+// promiseFour.then((users) => {
+//     // console.log(users.username)
+//     return users.username
+// }).then((username) => {
+//     console.log(username)
+// }).catch((error) => {
+//     console.log(error)
+// }).finally(() => console.log('the promise can be resolve or rejected'))
+
+const promiseFive = new Promise((resolve, reject) => {
     setTimeout(() => {
-        let error = false
+        const error = true
         if (!error) {
             resolve({
-                username: 'shami',
-                class: 10
+                name: 'ihtasham',
+                class: 12
             })
         }
         else {
-            reject('error:something went wrong')
+            reject('something went wrong in five promise')
         }
     }, 1000);
 })
-promiseFour.then((users) => {
-    // console.log(users.username)
-    return users.username
-}).then((username) => {
-    console.log(username)
-}).catch((error) => {
-    console.log(error)
-}).finally(() => console.log('the promise can be resolve or rejected'))
+// promiseFive.then(info => console.log(info.name)).catch(error => console.log(error))
 
+async function consumePromiseFive() {
+
+    try {
+        const respone = await promiseFive
+        console.log(respone)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+consumePromiseFive()
