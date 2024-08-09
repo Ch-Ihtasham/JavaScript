@@ -56,30 +56,52 @@
 //     console.log(error)
 // }).finally(() => console.log('the promise can be resolve or rejected'))
 
-const promiseFive = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const error = true
-        if (!error) {
-            resolve({
-                name: 'ihtasham',
-                class: 12
-            })
-        }
-        else {
-            reject('something went wrong in five promise')
-        }
-    }, 1000);
-})
+// const promiseFive = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         const error = true
+//         if (!error) {
+//             resolve({
+//                 name: 'ihtasham',
+//                 class: 12
+//             })
+//         }
+//         else {
+//             reject('something went wrong in five promise')
+//         }
+//     }, 1000);
+// })
 // promiseFive.then(info => console.log(info.name)).catch(error => console.log(error))
 
-async function consumePromiseFive() {
+// async function consumePromiseFive() {
 
-    try {
-        const respone = await promiseFive
-        console.log(respone)
+//     try { 
+//         const respone = await promiseFive
+//         console.log(respone)
 
-    } catch (error) {
-        console.log(error)
-    }
-}
-consumePromiseFive()
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+// consumePromiseFive()
+
+// async function f() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         let data = await response.json()
+//         console.log(data)
+//     }
+//     catch (error) {
+//         console.log('error')
+//     }
+// }
+// f();
+// console.log('hello ')
+
+fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
+    return response.json()
+}).then((data) => {
+    console.log(data)
+}).catch((error) => {
+    console.log(error)
+})
+
