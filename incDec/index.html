@@ -8,56 +8,74 @@
 </head>
 
 <body>
-    <div>
+    <div id="parent">
         <div>
             <span class="price">10</span>
             <span class="decrement">-</span>
             <span class="count">1</span>
             <span class="increment">+</span>
-            <span class="total">total</span>
+            <span class="total">10</span>
         </div>
         <div>
             <span class="price">20</span>
             <span class="decrement">-</span>
-            <span class="count">1</span>
+            <span class="count">2</span>
             <span class="increment">+</span>
-            <span class="total">total</span>
+            <span class="total">20</span>
         </div>
         <div>
             <span class="price">30</span>
             <span class="decrement">-</span>
-            <span class="count">1</span>
+            <span class="count">3</span>
             <span class="increment">+</span>
-            <span class="total">total</span>
+            <span class="total">30</span>
         </div>
     </div>
 
     <script>
+        let parent = document.querySelector('#parent')
+        let arr=[{
+            
+        }];
+        for (let i = 0; i < 3; i++) {
+            let div = document.createElement('div')
+            div.innerHTML = `
+            <span class="price">30</span>
+            <span class="decrement">-</span>
+            <span class="count">3</span>
+            <span class="increment">+</span>
+            <span class="total">30</span>
+            `
+            parent.appendChild(div)
+        }
         let price = document.querySelectorAll('.price')
         let decrement = document.querySelectorAll('.decrement')
         let count = document.querySelectorAll('.count')
         let increment = document.querySelectorAll('.increment')
         let total = document.querySelectorAll('.total')
-        price.forEach((e)=>{
-            
-            e.addEventListener('click',(e)=>{
-                console.log(e.target.innerHTML)
-            })
-        })
-        count.forEach((value)=>{
 
-        })
-        increment.forEach((e)=>{
-            e.addEventListener('click',(e)=>{
-                
+        increment.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+
+                let currentNumber = parseInt(count[index].innerHTML)
+                currentNumber++
+                count[index].innerHTML = currentNumber
+                let product = parseInt(price[index].innerHTML) * currentNumber
+                total[index].innerHTML = product
             })
         })
-        decrement.forEach((e)=>{
-            e.addEventListener('click',(e)=>{
-                
+        decrement.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                if (parseInt(count[index].innerHTML) > 0) {
+                    let currentNumber = parseInt(count[index].innerHTML)
+                    currentNumber--
+                    count[index].innerHTML = currentNumber
+                    let product = parseInt(price[index].innerHTML) * currentNumber
+                    total[index].innerHTML = product
+                }
             })
         })
-        
+
     </script>
 </body>
 
