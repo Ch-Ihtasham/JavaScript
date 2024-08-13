@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <span class="price">10</span>
+            <span class="decrement">-</span>
+            <span class="count">1</span>
+            <span class="increment">+</span>
+            <span class="total">total</span>
+        </div>
+        <div>
+            <span class="price">20</span>
+            <span class="decrement">-</span>
+            <span class="count">1</span>
+            <span class="increment">+</span>
+            <span class="total">total</span>
+        </div>
+        <div>
+            <span class="price">30</span>
+            <span class="decrement">-</span>
+            <span class="count">1</span>
+            <span class="increment">+</span>
+            <span class="total">total</span>
+        </div>
+    </div>
+
+    <script>
+        let price = document.querySelectorAll('.price')
+        let decrement = document.querySelectorAll('.decrement')
+        let count = document.querySelectorAll('.count')
+        let increment = document.querySelectorAll('.increment')
+        let total = document.querySelectorAll('.total')
+        price.forEach((e)=>{
+            
+            e.addEventListener('click',(e)=>{
+                console.log(e.target.innerHTML)
+            })
+        })
+        count.forEach((value)=>{
+
+        })
+        increment.forEach((e)=>{
+            e.addEventListener('click',(e)=>{
+                
+            })
+        })
+        decrement.forEach((e)=>{
+            e.addEventListener('click',(e)=>{
+                
+            })
+        })
+        
+    </script>
+</body>
+
+</html>
