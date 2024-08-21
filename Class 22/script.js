@@ -1,3 +1,3 @@
-function multiply(num){
-return num*5
+function multiply(num) {
+    return num * 5
 }
