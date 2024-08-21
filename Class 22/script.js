@@ -12,6 +12,6 @@ function createuser(name, score) {
 
 }
 createuser.prototype.increment = function () {
-
+    this.score++
 }
 createuser('ihtasham', 10)
