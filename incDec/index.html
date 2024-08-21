@@ -34,9 +34,34 @@
 
     <script>
         let parent = document.querySelector('#parent')
-        let arr=[{
-            
-        }];
+        let data = [{
+            price: 111,
+            total: 11
+        },
+        {
+            price: 122,
+            total: 12
+        },
+        {
+            price: 133,
+            total: 13
+        }
+
+        ]
+        for (let i of data) {
+            let div = document.createElement('div')
+            div.innerHTML = `
+            <span class="price">${i.price}</span>
+            <span class="decrement">-</span>
+            <span class="count">3</span>
+            <span class="increment">+</span>
+            <span class="total">${i.total}</span>
+            `
+            parent.appendChild(div)
+
+        }
+
+
         for (let i = 0; i < 3; i++) {
             let div = document.createElement('div')
             div.innerHTML = `
