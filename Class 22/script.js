@@ -14,4 +14,7 @@ function createuser(name, score) {
 createuser.prototype.increment = function () {
     this.score++
 }
+createuser.prototype.printMe = function () {
+    console.log(`score is ${this.score}`)
+}
 createuser('ihtasham', 10)
