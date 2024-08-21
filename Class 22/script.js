@@ -18,3 +18,8 @@ createuser.prototype.printMe = function () {
     console.log(`score is ${this.score}`)
 }
 createuser('ihtasham', 10)
+
+const u1 = createuser('ihtasham', 25)
+const u2 = createuser('shami', 300)
+// u1.printMe()
+// console.log(createuser.prototype)
