@@ -5,3 +5,13 @@ multiply.power = 4
 console.log(multiply(5))
 console.log(multiply.power)
 console.log(multiply.prototype)
+
+function createuser(name, score) {
+    this.name = name
+    this.score = score
+
+}
+createuser.prototype.increment = function () {
+
+}
+createuser('ihtasham', 10)
