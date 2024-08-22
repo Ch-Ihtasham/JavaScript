@@ -19,7 +19,8 @@ createuser.prototype.printMe = function () {
 }
 createuser('ihtasham', 10)
 
-const u1 = createuser('ihtasham', 25)
-const u2 = createuser('shami', 300)
-// u1.printMe()
+const u1 = new createuser('ihtasham', 25)
+const u2 = new createuser('shami', 300)
+u1.printMe()
+
 // console.log(createuser.prototype)
