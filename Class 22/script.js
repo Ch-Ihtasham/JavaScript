@@ -23,4 +23,5 @@ const u1 = new createuser('ihtasham', 25)
 const u2 = new createuser('shami', 300)
 u1.printMe()
 
+
 // console.log(createuser.prototype)
