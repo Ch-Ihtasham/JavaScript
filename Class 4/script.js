@@ -10,13 +10,10 @@
 
 let array = [1, 2, 4, 4, 5]
 for (let i = 0; i < array.length; i++) {
-    let no = array[i] 
-    for ( ; a < array.length; a++) {
-        if (no + array[a] == 8) {
-            console.log(no, array[a])
-            break;
+    let firstNumber = array[i]
+    for (let a = ++i; a < array.length; a++) {
+        if (firstNumber + array[a] == 8) {
+            console.log(firstNumber, array[a])
         }
     }
-
-
 }
