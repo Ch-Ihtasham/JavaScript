@@ -27,11 +27,12 @@ const b = {
 Object.setPrototypeOf(a, b)
 console.log(a.class)
 function createUser(username) {
-    this.username
+    this.username = username
 }
-function users(classes, rollno) {
+function users(username, classes, rollno) {
+    createUser.call(this, username)
     this.class = classes
     this.rollno = rollno
 }
-const shami = users('10', 20)
+const shami = new users('ihtasham', '10', 20)
 console.log(shami)
