@@ -26,4 +26,12 @@ const b = {
 }
 Object.setPrototypeOf(a, b)
 console.log(a.class)
-
+function createUser(username) {
+    this.username
+}
+function users(classes, rollno) {
+    this.class = classes
+    this.rollno = rollno
+}
+const shami = users('10', 20)
+console.log(shami)
