@@ -36,3 +36,4 @@ function users(username, classes, rollno) {
 }
 const shami = new users('ihtasham', '10', 20)
 console.log(shami)
+
