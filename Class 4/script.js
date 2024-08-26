@@ -18,4 +18,11 @@ for (let i = 0; i < array.length; i++) {
     }
 }
 
-
+const a = {
+    name: 'ihtasham'
+}
+const b = {
+    class: 10
+}
+Object.setPrototypeOf(a, b)
+console.log(a.class)
