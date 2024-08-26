@@ -26,3 +26,4 @@ const b = {
 }
 Object.setPrototypeOf(a, b)
 console.log(a.class)
+
